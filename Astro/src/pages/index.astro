@@ -1,0 +1,21 @@
+---
+import type IProduct from '../types/IProduct'
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+var responce = await fetch('http://localhost:1337/api/products',) 
+var data = await responce.json() as {
+	data:IProduct[],
+	meta:{}
+}
+var products = data.data 
+---
+
+<Layout title="Astro">
+	<h1>Главная</h1>
+	<div id="addBtn"></div>
+		{
+			products.map(product=><Card id={product.id} price={product.attributes.Price} title={product.attributes.Title}/>)
+		}
+</Layout>
+
+

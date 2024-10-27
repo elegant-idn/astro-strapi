@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Регистрация">
+    <div class="reg">
+        <h1>Регистрация</h1>
+
+        <form id="reg-form">
+            <input name="login" type="text" placeholder="Логин" />
+            <input name="email" type="text" placeholder="Email" />
+            <input name="password" type="password" placeholder="Пароль" />
+            <button type="submit">Регистрация</button>
+        </form>
+        <script is:inline type="module" src='scripts/registration.js'></script>
+    </div>
+</Layout>
+<style>
+    .reg{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color: #93dfc6;
+        min-height: 400px;
+        border-radius: 20px;
+    }
+    #reg-form{
+        margin-top: 40px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    #reg-form input,button{
+        transition: 0.5s;
+        text-align: center;
+        border: 1px solid #93dfc6;
+        height: 30px;
+        font-size: 15px;
+        border-radius: 15px;
+        margin: 10px 0;
+        
+    }
+    #reg-form button:hover{
+        background-color: rgb(192, 183, 183);
+    }
+</style>

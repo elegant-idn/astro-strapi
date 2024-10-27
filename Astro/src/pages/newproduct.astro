@@ -1,0 +1,81 @@
+---
+
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout title={'new product'}>
+    <div class="card" id="new-card">
+        <!-- <img src= /> -->
+        <div class="data">
+            <div>
+                Наименование:<input id="title" />
+            </div>
+            <div>
+                UID:<input id="uid" />
+            </div>
+            <div>
+                Цена:<input
+                    id="price"
+                    type="number"
+                />
+            </div>
+            <h3>Выберите картинку</h3>
+            <div id="pictures">
+                
+            </div>
+            <button id="new-button"> Создать</button>
+        </div>
+        
+    </div>
+</Layout>
+<script type="module" src="/scripts/newProduct.js"></script>
+<style>
+    .card {
+        display: flex;
+    }
+    img {
+        width: 300px;
+    }
+    button {
+        background-color: aquamarine;
+        border: 0px;
+        transition: 0.5s;
+        margin-top: 10px;
+        width: 200px;
+        height: 50px;
+        border-radius: 20px;
+    }
+    button:hover {
+        background-color: rgb(92, 248, 196);
+    }
+    input {
+        padding: 0 10px;
+        margin-top: 5px;
+        background-color: rgb(233, 231, 231);
+        border-radius: 20px;
+        color: black;
+        font-size: 17px;
+        font-weight: 100;
+    }
+    input:disabled {
+        background-color: inherit;
+        border: 0px;
+    }
+    #title {
+        font-size: 25px;
+    }
+</style>
+<style is:inline>
+    .hide{
+        display: none;
+    }
+    img{
+        width: 200px;
+        height: 200px;
+    }
+    #pictures{
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>
